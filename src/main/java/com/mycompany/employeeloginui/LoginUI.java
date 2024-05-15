@@ -4,9 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+
 public class LoginUI {
     private JFrame f = new JFrame("Employee Management System");
-    private JLabel lblUsername, lblEmployeeID, lblPassword, labelimg;
+    private JLabel title, title1,lblUsername, lblEmployeeID, lblPassword, labelimg;
     private JButton btnLogin;
     private JTextField txtfldUsername, txtfldEmployeeID;
     private JPasswordField txtfldPassword;
@@ -17,32 +18,55 @@ public class LoginUI {
         f.setLayout(null);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        txtfldUsername = new JTextField();
-        txtfldUsername.setBounds(250, 205, 250, 25);
-        
         txtfldEmployeeID = new JTextField();
-        txtfldUsername.setBounds(250, 305, 250, 25);
+        txtfldEmployeeID.setBounds(250, 245, 250, 25);
+        
+        txtfldUsername = new JTextField();
+        txtfldUsername.setBounds(250, 290, 250, 25);
         
         txtfldPassword = new JPasswordField();
-        txtfldPassword.setBounds(250, 365, 250, 25);
+        txtfldPassword.setBounds(250, 340, 250, 25);
         
-        lblUsername = new JLabel("Username:");
-        lblUsername.setBounds(100, 205, 500, 100);
+        title = new JLabel ("Nice to see you again ");
+        title.setBounds (200, 95,500,100);
+        title.setFont (new Font("Arial", Font.PLAIN , 20));
+        
+        title1 = new JLabel ("WELCOME BACK  ");
+        title1.setBounds (100, 130,500,100);
+        title1.setFont (new Font("Arial", Font.PLAIN , 50));
+        
+        lblUsername = new JLabel("Employee ID:");
+        lblUsername.setBounds(125, 205, 500, 100);
         lblUsername.setFont(new Font("Arial",Font.PLAIN ,20));
         
-        lblEmployeeID = new JLabel ("Employee ID:");
-        lblEmployeeID.setBounds(100, 265, 500, 100);
+        lblEmployeeID = new JLabel ("Username:");
+        lblEmployeeID.setBounds(125, 250, 500, 100);
         lblEmployeeID.setFont(new Font("Arial",Font.PLAIN,20));
         
         lblPassword = new JLabel("Password:");
-        lblPassword.setBounds(100, 325, 500, 100);
+        lblPassword.setBounds(125, 300, 500, 100);
         lblPassword.setFont(new Font("Arial",Font.PLAIN,20));
         
         btnLogin = new JButton("Log In");
-        btnLogin.setBounds(250, 410, 250, 50);
+        btnLogin.setBounds(250, 380, 250, 50);
         btnLogin.setBackground(Color.BLUE);
         btnLogin.setForeground(Color.WHITE);
         btnLogin.setFont(new Font("Lato",Font.BOLD,25));
+        btnLogin.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String name = txtfldUsername.getText();
+                String employeeid = txtfldEmployeeID.getText();
+                String password = txtfldPassword.getText();
+                if (name.equals("admin")||name.equals("staff")||name.equals("manager") 
+                    && employeeid.equals("admin")||employeeid.equals("staff")||employeeid.equals("manager")
+                        && password.equals("admin")||password.equals("staff")||password.equals("manager")) {
+                    f.dispose();
+                    new MainMenu();
+                } else {
+                    JOptionPane.showMessageDialog(btnLogin, "Invalid Name or Password", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
         
         ImageIcon i1 = new ImageIcon("Images/bg.png");
         Image i2 = i1.getImage().getScaledInstance(950, 600, Image.SCALE_SMOOTH);
@@ -59,6 +83,8 @@ public class LoginUI {
         //will add the label to the panel
         panel1.add(labelimg);
         
+        f.add(title1);
+        f.add(title);
         f.add(txtfldUsername);
         f.add(txtfldEmployeeID);
         f.add(txtfldPassword);
