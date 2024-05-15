@@ -12,6 +12,9 @@ public class LoginUI extends Frame{
         f.getContentPane().setBackground(new java.awt.Color(204,204,255));
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
+        
+        
+        
         TextField txtfldUsername = new TextField();
         TextField txtfldEmployeeID = new TextField();
         JPasswordField txtfldPassword = new JPasswordField();
