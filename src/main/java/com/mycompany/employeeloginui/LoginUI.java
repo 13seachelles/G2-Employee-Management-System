@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+
 public class LoginUI {
     private JFrame f = new JFrame("Employee Management System");
     private JLabel lblUsername, lblEmployeeID, lblPassword, labelimg;
@@ -18,10 +19,10 @@ public class LoginUI {
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         txtfldUsername = new JTextField();
-        txtfldUsername.setBounds(250, 205, 250, 25);
+        txtfldUsername.setBounds(250, 245, 250, 25);
         
         txtfldEmployeeID = new JTextField();
-        txtfldUsername.setBounds(250, 305, 250, 25);
+        txtfldEmployeeID.setBounds(250, 305, 250, 25);
         
         txtfldPassword = new JPasswordField();
         txtfldPassword.setBounds(250, 365, 250, 25);
@@ -43,6 +44,21 @@ public class LoginUI {
         btnLogin.setBackground(Color.BLUE);
         btnLogin.setForeground(Color.WHITE);
         btnLogin.setFont(new Font("Lato",Font.BOLD,25));
+        btnLogin.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String name = txtfldUsername.getText();
+                String employeeid = txtfldEmployeeID.getText();
+                String password = txtfldPassword.getText();
+                if (name.equals("admin")||name.equals("staff")||name.equals("manager") 
+                    && employeeid.equals("admin")||employeeid.equals("staff")||employeeid.equals("manager")
+                        && password.equals("admin")||password.equals("staff")||password.equals("manager")) {
+                    f.dispose();
+                    new MainMenu();
+                } else {
+                    JOptionPane.showMessageDialog(btnLogin, "Invalid Name or Password", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
         
         ImageIcon i1 = new ImageIcon("Images/bg.png");
         Image i2 = i1.getImage().getScaledInstance(950, 600, Image.SCALE_SMOOTH);
