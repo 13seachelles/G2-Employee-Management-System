@@ -4,27 +4,28 @@ import javax.swing.*;
 import java.awt.*;
 
 public class LoginUI extends Frame{
+    private JFrame f = new JFrame("Employee Management System");
+    private JLabel lblUsername, lblEmployeeID, lblPassword;
+    private JButton btnLogin;
+    private JTextField txtfldUsername, txtfldEmployeeID;
+    private JPasswordField txtfldPassword;
+    
     LoginUI(){
-        JFrame f = new JFrame();
         f.setSize(900,600);
         f.setLayout(null);
-        f.setTitle("Employee Management System");
         f.getContentPane().setBackground(new java.awt.Color(204,204,255));
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        
-        
-        
-        TextField txtfldUsername = new TextField();
-        TextField txtfldEmployeeID = new TextField();
-        JPasswordField txtfldPassword = new JPasswordField();
-        Label lblUsername = new Label("Username:");
+        txtfldUsername = new JTextField();
+        txtfldEmployeeID = new JTextField();
+        txtfldPassword = new JPasswordField();
+        lblUsername = new JLabel("Username:");
         lblUsername.setFont(new Font("Arial",Font.PLAIN ,20));
-        Label lblEmployeeID = new Label ("Employee ID:");
+        lblEmployeeID = new JLabel ("Employee ID:");
         lblEmployeeID.setFont(new Font("Arial",Font.PLAIN,20));
-        Label lblPassword = new Label("Password:");
+        lblPassword = new JLabel("Password:");
         lblPassword.setFont(new Font("Arial",Font.PLAIN,20));
-        Button btnLogin = new Button("Log In");
+        btnLogin = new JButton("Log In");
         btnLogin.setBackground(Color.BLUE);
         btnLogin.setForeground(Color.WHITE);
         btnLogin.setFont(new Font("Lato",Font.BOLD,25));
