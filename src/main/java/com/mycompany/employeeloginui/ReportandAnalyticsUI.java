@@ -132,6 +132,14 @@ public class ReportandAnalyticsUI {
            
      buttonpanelsubpanel4.add(editButton);
      buttonpanelsubpanel4.add(backButton);
+     backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame.getContentPane().removeAll(); // Remove all components from the JFrame
+                frame.dispose(); 
+                new MainMenu();
+                
+            }
+        });
      subpanel4.add(buttonpanelsubpanel4, BorderLayout.SOUTH);
 
         // Add subpanels to the frame using GridLayout
