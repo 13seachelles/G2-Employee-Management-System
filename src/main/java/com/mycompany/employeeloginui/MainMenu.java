@@ -13,6 +13,8 @@ import javax.swing.JButton;
 import javax.swing.border.BevelBorder;
 import javax.swing.BorderFactory;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 
@@ -23,7 +25,7 @@ public class MainMenu {
     private JLabel label1;
     private JPanel panel1;
   
-    private JButton BTN1,BTN2,BTN3,BTN4,BTN5,BTN6;
+    private JButton BTN1,BTN2,BTN3,BTN4;
     MainMenu(){
         //frame
         Acc = new JFrame();
@@ -72,25 +74,26 @@ public class MainMenu {
         BTN2.setBounds(10,10,100,100);
      //   BTN1.SetHorizontalAlignment(JButton.CENTER);
         panel.add(BTN2);
-        JButton BTN3 = new JButton("Report");
+        
+        JButton BTN3 = new JButton("Report and Analytics");
         BTN3.setBounds(10,10,100,100);
         panel.add(BTN3);
-        JButton BTN4 = new JButton("Analytics");
-        BTN4.setBounds(10,10,100,100);
-        panel.add(BTN4);
-          JButton BTN5 = new JButton("Option");
-       BTN1.setBounds(10,10,100,100);
-       panel.add(BTN5);
-        JButton BTN6 = new JButton("");
-       BTN1.setBounds(10,10,100,100);
-        panel.add(BTN6);
+        BTN3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Acc.dispose();
+                new ReportandAnalyticsUI();
+                
+            }
+        });
         
+        JButton BTN4 = new JButton("Option");
+       BTN1.setBounds(10,10,100,100);
+       panel.add(BTN4);
+       
         panel.add(BTN1);
         panel.add(BTN2);
         panel.add(BTN3);
         panel.add(BTN4);
-        panel.add(BTN5);
-        panel.add(BTN6);
         
        
 
