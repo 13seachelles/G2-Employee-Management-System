@@ -16,14 +16,14 @@ public class EmployeeList extends JFrame {
     EmployeeList(){  
         
         // Frame
-        Frame.setSize(900, 600);
+        Frame.setSize(900, 580);
         Frame.setLayout(null);
         Frame.setDefaultCloseOperation(Frame.EXIT_ON_CLOSE);
         
         // Background Image
         ImageIcon backgroundImage = new ImageIcon("background.jpg"); // Provide the path to your image file
         JLabel backgroundLabel = new JLabel(backgroundImage);
-        backgroundLabel.setBounds(0, 0, 900, 600);
+        backgroundLabel.setBounds(0, 0, 900, 555);
         Frame.add(backgroundLabel);
         
         
@@ -48,6 +48,18 @@ public class EmployeeList extends JFrame {
         JLabel logoLabel = new JLabel(scaledLogoIcon);
         logoLabel.setBounds(20, 5, 120, 90);
         backgroundLabel.add(logoLabel);
+        
+        JButton backButton = new JButton("Back");
+        backButton.setFont(new Font("Arial", Font.BOLD, 12));
+        backButton.setBounds(700,470,80,45);
+        backgroundLabel.add(backButton);
+        
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {  
+//            new MainMenu;    
+            }
+        });
           
         // Adding sample employee records
         addEmployee("John K. Makulit", "Tech Specialist", "IT");
@@ -61,7 +73,6 @@ public class EmployeeList extends JFrame {
         JPanel employeePanel = new JPanel();
         employeePanel.setLayout(new BorderLayout());
         employeePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        employeePanel.setOpaque(false); // Make panel transparent
         
         JLabel nameLabel = new JLabel("Employee Name: " + name);
         nameLabel.setFont(new Font("Arial", Font.BOLD, 18));
@@ -77,14 +88,14 @@ public class EmployeeList extends JFrame {
         
         JButton viewButton = new JButton("View Information");
         viewButton.setFont(new Font("Arial", Font.BOLD, 12));
-         
         
+        // TBD, would probs change JOptionPane to a new frame soon instead of a dialog box
         viewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(Frame, "Job Description for: " + name );
+                JOptionPane.showMessageDialog(Frame, "Job Description for: " + name ); 
             }
-        });
+        });      
         
         JPanel textPanel = new JPanel();
         textPanel.setLayout(new GridLayout(3, 1));
@@ -95,7 +106,7 @@ public class EmployeeList extends JFrame {
         
         employeePanel.add(textPanel, BorderLayout.WEST);
         employeePanel.add(viewButton, BorderLayout.EAST);
-        
+           
         employeeContainer.add(employeePanel);
         employeeContainer.revalidate();
     }
