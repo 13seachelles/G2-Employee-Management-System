@@ -68,7 +68,7 @@ public class LoginUI {
             }
         });
         
-        ImageIcon i1 = new ImageIcon("Images/bg.png");
+        ImageIcon i1 = new ImageIcon("Images/bg1.jpg");
         Image i2 = i1.getImage().getScaledInstance(950, 600, Image.SCALE_SMOOTH);
         ImageIcon i3 = new ImageIcon(i2);
        
