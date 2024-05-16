@@ -72,10 +72,8 @@ public class LoginUI {
         Image i2 = i1.getImage().getScaledInstance(950, 600, Image.SCALE_SMOOTH);
         ImageIcon i3 = new ImageIcon(i2);
        
-        //label for the pic
         labelimg = new JLabel(i3);
         
-        //panel for image on the ui and it setttings
         panel1 = new JPanel();
         panel1.setBounds(0,-10,900,600);
         panel1.setBackground(Color.BLACK);
