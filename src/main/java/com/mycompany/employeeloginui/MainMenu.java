@@ -72,8 +72,14 @@ public class MainMenu {
         
         JButton BTN2 = new JButton("Employee Dashboard");
         BTN2.setBounds(10,10,100,100);
-     //   BTN1.SetHorizontalAlignment(JButton.CENTER);
         panel.add(BTN2);
+        BTN2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Acc.dispose();
+//              new EmployeeList();
+                
+            }
+        });
         
         JButton BTN3 = new JButton("Report and Analytics");
         BTN3.setBounds(10,10,100,100);
