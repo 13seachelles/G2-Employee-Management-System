@@ -104,7 +104,7 @@ public class ReportandAnalyticsUI {
      einformationtable.setBackground(lightBlue);
      
         JPanel buttonPanel3 = new JPanel(new FlowLayout(FlowLayout.LEFT, 150,5)); 
-        JButton viewButton = new JButton("view details");
+        JButton viewButton = new JButton("View details");
         buttonPanel3.add(viewButton);
         subpanel3.add(buttonPanel3, BorderLayout.SOUTH);
              
