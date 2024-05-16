@@ -14,6 +14,8 @@ import javax.swing.JButton;
 import javax.swing.border.BevelBorder;
 import javax.swing.BorderFactory;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 
@@ -70,25 +72,15 @@ public class MainMenu {
        panel.add(BTN1);
         
         JButton BTN2 = new JButton("Employee Dashboard");
-        BTN2.setBounds(10,10,50,50);
-     //   BTN1.SetHorizontalAlignment(JButton.CENTER);
-        panel.add(BTN2);
-        JButton BTN3 = new JButton("Report and Analytics");
-        BTN3.setBounds(10,10,50,50);
-        panel.add(BTN3);
-        JButton BTN4 = new JButton("Log out");
-       BTN4.setBounds(10,10,100,100);
-        panel.add(BTN4);
         
-      
+        JButton BTN4 = new JButton("Option");
+       BTN1.setBounds(10,10,100,100);
+       panel.add(BTN4);
        
-        
-        
         panel.add(BTN1);
         panel.add(BTN2);
         panel.add(BTN3);
         panel.add(BTN4);
-      
         
        
         
