@@ -50,7 +50,7 @@ public class EmployeeList extends JFrame {
         backgroundLabel.add(logoLabel);
         
         JButton backButton = new JButton("Back");
-        backButton.setFont(new Font("Arial", Font.BOLD, 12));
+        backButton.setFont(new Font("Bookman Old Style", Font.BOLD, 12));
         backButton.setBounds(700,470,80,45);
         backgroundLabel.add(backButton);
         
