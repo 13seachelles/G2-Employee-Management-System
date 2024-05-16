@@ -21,7 +21,7 @@ public class EmployeeList extends JFrame {
         Frame.setDefaultCloseOperation(Frame.EXIT_ON_CLOSE);
         
         // Background Image
-        ImageIcon backgroundImage = new ImageIcon("background.jpg"); // Provide the path to your image file
+        ImageIcon backgroundImage = new ImageIcon("Images/background.jpg"); // Provide the path to your image file
         JLabel backgroundLabel = new JLabel(backgroundImage);
         backgroundLabel.setBounds(0, 0, 900, 555);
         Frame.add(backgroundLabel);
@@ -42,7 +42,7 @@ public class EmployeeList extends JFrame {
         backgroundLabel.add(scrollmenu);
         
         // Adding logo
-        ImageIcon logoImage = new ImageIcon("OBRA.png"); // Provide the path to your logo image file
+        ImageIcon logoImage = new ImageIcon("Images/OBRA.png"); // Provide the path to your logo image file
         Image scaledLogoImage = logoImage.getImage().getScaledInstance(250, 230, Image.SCALE_SMOOTH);
         ImageIcon scaledLogoIcon = new ImageIcon(scaledLogoImage);
         JLabel logoLabel = new JLabel(scaledLogoIcon);
