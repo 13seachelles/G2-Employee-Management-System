@@ -76,7 +76,7 @@ public class MainMenu {
         BTN2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Acc.dispose();
-//              new EmployeeList();
+                new EmployeeList();
                 
             }
         });

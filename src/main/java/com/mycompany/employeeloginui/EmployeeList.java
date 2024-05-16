@@ -57,7 +57,8 @@ public class EmployeeList extends JFrame {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {  
-//            new MainMenu;    
+            Frame.dispose();
+            new MainMenu();    
             }
         });
           
