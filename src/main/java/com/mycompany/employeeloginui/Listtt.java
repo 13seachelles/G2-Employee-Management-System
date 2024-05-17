@@ -81,11 +81,13 @@ public class Listtt {
         JButton btnAdd = new JButton("Add");
         JButton btnDelete = new JButton("Delete");
         JButton btnUpdate = new JButton("Update");
+        JButton btnBack = new JButton("Back");
         JButton btnNext = new JButton("Next");
         
         btnAdd.setBounds(50,355,100,25);
         btnDelete.setBounds(225,355,100,25);
         btnUpdate.setBounds(400,355,100,25);
+        btnBack.setBounds(650,355,100,25);
         btnNext.setBounds(750,355,100,25);
        
         
@@ -111,6 +113,7 @@ public class Listtt {
         frame.add(btnAdd);
         frame.add(btnDelete);
         frame.add(btnUpdate);
+        frame.add(btnBack);
         frame.add(btnNext);
        
 
@@ -134,7 +137,7 @@ public class Listtt {
             }
         });
         
-             btnDelete.addActionListener(new ActionListener(){
+            btnDelete.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 
@@ -146,7 +149,15 @@ public class Listtt {
                 System.out.println("Deleted!!");
                 }
             }
-        });              
+        }); 
+            btnBack.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new MainMenu();
+            }
+            
+            }); 
                 frame.setSize(900,430);
                 frame.setLocationRelativeTo(null);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

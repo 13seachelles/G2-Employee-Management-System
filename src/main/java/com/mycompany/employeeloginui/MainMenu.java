@@ -37,6 +37,13 @@ public class MainMenu {
         BTN1.setBounds(300,180,300,50);
         BTN1.setBackground(Color.WHITE);
         BTN1.setFont(new Font("Arial", Font.BOLD,20));
+        BTN1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Acc.dispose();
+                new Listtt();
+                
+            }
+        });
         
         BTN2 = new JButton("Employee Dashboard");
         BTN2.setBounds(300,260,300,50);
