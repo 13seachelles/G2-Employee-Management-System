@@ -48,18 +48,17 @@ public class ReportandAnalyticsUI {
         JButton addButton = new JButton("Add");
         JButton reviewButton = new JButton("Review");
         JButton deleteButton = new JButton("Delete");
-         reviewButton.addActionListener(new ActionListener() {
-           
-     public void actionPerformed(ActionEvent e) {
-                int selectedRow = employeetable.getSelectedRow();
-                if (selectedRow >= 0) {
-                    String employeename = (String) employeetable.getValueAt(selectedRow, 0);
-                    JOptionPane.showMessageDialog(frame, "Opening review window for " + employeename);
-                } else {
-                    JOptionPane.showMessageDialog(frame, "Please select an employee to review.");
-                }
-            }
-        });
+        reviewButton.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+        // Create an instance of EmployeeReview
+        EmployeeReview employeeReview = new EmployeeReview();
+        // Set the EmployeeReview frame visible
+        employeeReview.setVisible(true);
+        // Dispose the current frame
+        frame.dispose();
+    }
+});
+
         buttonPanel1.add(reviewButton);
         subpanel1.add(buttonPanel1, BorderLayout.SOUTH);
 
