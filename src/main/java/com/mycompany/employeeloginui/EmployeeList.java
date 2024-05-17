@@ -1,4 +1,4 @@
-package com.mycompany.employeeloginui;
+package main.java.com.mycompany.employeeloginui;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

@@ -1,4 +1,4 @@
-package com.mycompany.employeeloginui;
+package main.java.com.mycompany.employeeloginui;
 
 import javax.swing.*;
 import java.awt.*;

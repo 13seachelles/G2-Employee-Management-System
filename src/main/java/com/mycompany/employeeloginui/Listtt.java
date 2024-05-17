@@ -1,3 +1,5 @@
+package main.java.com.mycompany.employeeloginui;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Label;
@@ -15,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class Listtt {
     
-    public static void main (String[]args) {
+        Listtt() {
         
         JFrame frame = new JFrame();
         JTable table = new JTable();

@@ -1,5 +1,5 @@
 
-package com.mycompany.employeeloginui;
+package main.java.com.mycompany.employeeloginui;
 
 public class EmployeeListMain {
     

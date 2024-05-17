@@ -12,7 +12,7 @@ public class EmployeeListRecords {
     
     public static void main(String[] args) {
 
-        EmployeeListRecords employeeListRecords = new EmployeeListRecords();
+        new Listtt();
             
 }
 }
