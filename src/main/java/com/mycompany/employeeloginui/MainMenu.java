@@ -27,7 +27,7 @@ public class MainMenu {
         
           //label
         label1 = new JLabel("MAIN MENU");
-        label1.setForeground(Color.WHITE);
+        label1.setForeground(Color.BLACK);
         label1.setFont(new Font("Arial Rounded MT Bold", Font.BOLD,60));
         label1.setBounds(270, 55, 500, 100);
        
@@ -65,7 +65,8 @@ public class MainMenu {
         
         BTN4 = new JButton("Log out");
         BTN4.setBounds(700,500,150,50);
-        BTN4.setBackground(Color.WHITE);
+        BTN4.setBackground(Color.decode("#333333"));
+        BTN4.setForeground(Color.WHITE);
         BTN4.setFont(new Font("Arial", Font.BOLD,20));
         BTN4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -76,7 +77,7 @@ public class MainMenu {
                 }
             });
         
-        ImageIcon img = new ImageIcon("Images/bg.jpg");
+        ImageIcon img = new ImageIcon("Images/bg3.png");
         Image img1 = img.getImage().getScaledInstance(950, 600, Image.SCALE_SMOOTH);
         ImageIcon img2 = new ImageIcon(img1);
 
