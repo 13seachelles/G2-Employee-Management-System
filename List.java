@@ -102,8 +102,7 @@ public class List {
         frame.add(textAddress);
         frame.add(textEmail);
         frame.add(textContactNumber);
-         frame.add(LABEL);
-         frame.setLayout(null);
+         
         
         frame.setSize(900,600);   
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
