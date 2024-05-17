@@ -124,7 +124,7 @@ public class ReportandAnalyticsUI {
       financialperftable.setBackground(lightBlue);
       
      JPanel buttonpanelsubpanel4 = new JPanel();
-            buttonpanelsubpanel4.setLayout(new FlowLayout(FlowLayout.LEFT, 150, 5)); // Adjust spacing as needed
+            buttonpanelsubpanel4.setLayout(new FlowLayout(FlowLayout.LEFT, 150, 4)); // Adjust spacing as needed
 
      JButton editButton = new JButton("Edit");
      JButton backButton = new JButton("Back");
