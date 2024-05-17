@@ -57,28 +57,25 @@ public class LoginUI {
                 String name = txtfldUsername.getText();
                 String employeeid = txtfldEmployeeID.getText();
                 String password = txtfldPassword.getText();
-                if (name.equals("admin")||name.equals("staff")||name.equals("manager") 
-                    && employeeid.equals("admin")||employeeid.equals("staff")||employeeid.equals("manager")
-                        && password.equals("admin")||password.equals("staff")||password.equals("manager")) {
+                if (name.equals("admin")||name.equals("staff")
+                    && employeeid.equals("admin")||employeeid.equals("staff")
+                        && password.equals("admin")||password.equals("staff")) {
                     f.dispose();
                     new MainMenu();
                 } else {
-                    JOptionPane.showMessageDialog(btnLogin, "Invalid Name or Password", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(btnLogin, "Invalid Type", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
         
-        ImageIcon i1 = new ImageIcon("Images/bg1.jpg");
-        Image i2 = i1.getImage().getScaledInstance(950, 600, Image.SCALE_SMOOTH);
-        ImageIcon i3 = new ImageIcon(i2);
-       
-        labelimg = new JLabel(i3);
+        ImageIcon image = new ImageIcon("Images/bg1.jpg");
+        Image image1 = image.getImage().getScaledInstance(950, 600, Image.SCALE_SMOOTH);
+        ImageIcon image2 = new ImageIcon(image1);
+        labelimg = new JLabel(image2);
         
         panel1 = new JPanel();
         panel1.setBounds(0,-10,900,600);
         panel1.setBackground(Color.BLACK);
-        
-        //will add the label to the panel
         panel1.add(labelimg);
         
         f.add(title1);
@@ -92,7 +89,6 @@ public class LoginUI {
         f.add(btnLogin);
         f.add(panel1);
 
-        //Visible to True
         f.setVisible(true);
     }
     
