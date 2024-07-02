@@ -14,7 +14,7 @@ import java.sql.*;
 public class ReportandAnalyticsUI {
 
     private Connection connection;
-
+            
     public ReportandAnalyticsUI() {
         // Establish the database connection
         try {
