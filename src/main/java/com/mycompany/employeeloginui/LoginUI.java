@@ -4,8 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-
-public class LoginUI {
+    public class LoginUI {
     private JFrame f = new JFrame("Employee Management System");
     private JLabel title, title1,lblUsername, lblEmployeeID, lblPassword, labelimg;
     private JButton btnLogin;
