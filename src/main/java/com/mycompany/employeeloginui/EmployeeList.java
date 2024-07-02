@@ -77,7 +77,7 @@ public class EmployeeList extends JFrame {
         });
         
          try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_oop", "root", "root");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalsoop", "root", "Rachelle");
             Statement st = conn.createStatement();
             String query = "SELECT * FROM tbl_employee";
             ResultSet rs = st.executeQuery(query);
