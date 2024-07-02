@@ -1,5 +1,3 @@
-//Added SQL Commands
-
 package main.java.com.mycompany.employeeloginui;
 
 import java.sql.*;
