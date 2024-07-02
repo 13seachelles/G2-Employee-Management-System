@@ -24,7 +24,7 @@ public class Listtt {
         
         
        
-        Object[] columns = {"EmployeeName", "Age","Birthdate", "Address","Email","ContactNumber"};
+        Object[] columns = {"Employee Name", "Age","Birthdate", "Address","Email","Contact Number"};
         DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(columns);
         table.setModel(model);
@@ -44,14 +44,19 @@ public class Listtt {
         
         textEmployeeName.setBounds(250,220,200,25);
         textEmployeeName.setFont(new Font("Time new roman",Font.BOLD,14));
+        
         textAge.setBounds(250,250,200,25);
         textAge.setFont(new Font("Time new roman",Font.BOLD,14));
+        
         textBirthdate.setBounds(250,280,200,25);
         textBirthdate.setFont(new Font("Time new roman",Font.BOLD,14));
+        
         textAddress.setBounds(600,220,200,25);
         textAddress.setFont(new Font("Time new roman",Font.BOLD,14));
+        
         textEmail.setBounds(600,250,200,25);
         textEmail.setFont(new Font("Time new roman",Font.BOLD,14));
+        
         textContactNumber.setBounds(600,280,200,25);
         textContactNumber.setFont(new Font("Time new roman",Font.BOLD,14));
         
@@ -60,18 +65,23 @@ public class Listtt {
          JLabel lblEmployeeName = new JLabel("EmployeeName");
          lblEmployeeName.setBounds(20,220,100,25);
          lblEmployeeName.setFont(new Font ("Time new  roman",Font.BOLD,50));
+         
          JLabel lblAge = new JLabel("Age");
          lblAge.setBounds(20,250,100,25);
          lblAge.setFont(new Font ("Time new  roman",Font.BOLD,50));
+         
          JLabel lblBirthdate = new JLabel("Birthdate");
          lblBirthdate.setBounds(20,280,100,25);
          lblBirthdate.setFont(new Font ("Time new  roman",Font.BOLD,50));
+         
          JLabel lblAddress = new JLabel("Address");
          lblAddress.setBounds(50,220,100,25);
          lblAddress.setFont(new Font ("Time new  roman",Font.BOLD,50));
+         
          JLabel lblEmail = new JLabel("Email");
          lblEmail.setBounds(50,250,100,25);
          lblEmail.setFont(new Font ("Time new  roman",Font.BOLD,50));
+         
          JLabel lblContactNumber = new JLabel("ContactNumber");
          lblContactNumber.setBounds(50,280,100,25);
          lblContactNumber.setFont(new Font ("Time new  roman",Font.BOLD,50));
