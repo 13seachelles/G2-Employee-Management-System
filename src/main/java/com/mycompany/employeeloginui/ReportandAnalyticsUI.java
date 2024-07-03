@@ -18,7 +18,7 @@ public class ReportandAnalyticsUI {
     public ReportandAnalyticsUI() {
         // Establish the database connection
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_oop", "root", "root");           
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalsoop", "root", "Rachelle");           
         } catch (SQLException e) {
             System.out.println("Error while connecting to the database: " + e.getMessage());
         }

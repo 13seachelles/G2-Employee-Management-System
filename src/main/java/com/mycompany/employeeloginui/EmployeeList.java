@@ -91,7 +91,7 @@ public class EmployeeList extends JFrame {
                 addEmployee(employeeID, name, position, department);
             }
         } catch (SQLException e) {
-            System.out.println("Error while connecting to the database");
+            System.out.println(e);
         }
           
 
